@@ -1,0 +1,234 @@
+/* Header Component Styles */
+.header {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-logo:hover {
+  color: #2563eb;
+}
+
+.header-nav {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.header-nav-link {
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  color: #4b5563;
+  text-decoration: none;
+  position: relative;
+}
+
+.header-nav-link:hover {
+  color: #1f2937;
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.header-nav-link-active {
+  color: #2563eb;
+  background-color: #eff6ff;
+  font-weight: 600;
+  transform: translateY(-1px);
+}
+
+.header-nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 2px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Mobile Menu Button */
+.header-mobile-menu-button {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 60;
+}
+
+.header-menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  position: relative;
+}
+
+.header-menu-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #374151;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Mobile Menu Open State */
+.header-mobile-menu-button[aria-expanded="true"] .header-menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.header-mobile-menu-button[aria-expanded="true"] .header-menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-mobile-menu-button[aria-expanded="true"] .header-menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation */
+.header-mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 50;
+}
+
+.header-mobile-nav-open {
+  display: block;
+}
+
+.header-mobile-nav-link {
+  display: block;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 0.2rem;
+}
+
+.header-mobile-nav-link:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.header-mobile-nav-link-active {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+  border-left: 3px solid #2563eb;
+}
+
+/* Screen Reader Only */
+.header-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Pequena animação para o indicador */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .header-nav {
+    gap: 0.1rem;
+  }
+  
+  .header-nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  
+  .header-mobile-menu-button {
+    display: flex;
+  }
+  
+  .header-container {
+    height: 65px;
+    padding: 0 1rem;
+  }
+  
+  .header-logo {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    font-size: 1.2rem;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .header-container {
+    padding: 0 0.8rem;
+  }
+}
