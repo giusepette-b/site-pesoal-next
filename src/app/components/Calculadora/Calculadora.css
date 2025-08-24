@@ -1,0 +1,156 @@
+/* Calculator.css - Design com paleta escura */
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.calculator-title {
+  color: #e94560;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.calculator {
+  width: 100%;
+  background: #0f3460;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: #1a1a2e;
+  color: #fff;
+  text-align: right;
+  padding: 10px 15px;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: 'Courier New', monospace;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.calculator-keys button {
+  height: 60px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: #1a1a2e;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-keys button:hover {
+  background: #2d2d4a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-keys button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos para os operadores */
+.calculator-keys .operator {
+  background: #e94560;
+  color: #fff;
+}
+
+.calculator-keys .operator:hover {
+  background: #ff6b81;
+}
+
+/* Estilo para o botão de igual */
+.calculator-keys .equal-sign {
+  background: #00b894;
+  color: #fff;
+  grid-column: span 2;
+}
+
+.calculator-keys .equal-sign:hover {
+  background: #00d4a3;
+}
+
+/* Estilo para o botão AC */
+.calculator-keys .all-clear {
+  background: #ff7675;
+  color: #fff;
+}
+
+.calculator-keys .all-clear:hover {
+  background: #ff9291;
+}
+
+/* Estilo para o botão decimal */
+.calculator-keys .decimal {
+  background: #37474f;
+}
+
+.calculator-keys .decimal:hover {
+  background: #455a64;
+}
+
+/* Efeito de foco para acessibilidade */
+.calculator-keys button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .calculator-container {
+    padding: 1rem;
+    max-width: 280px;
+  }
+  
+  .calculator {
+    padding: 15px;
+  }
+  
+  .calculator-screen {
+    height: 50px;
+    font-size: 1.7rem;
+  }
+  
+  .calculator-keys button {
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .calculator-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animação para o display quando o valor muda */
+.calculator-screen {
+  transition: all 0.3s ease;
+}
+
+/* Efeito de brilho nos botões numéricos */
+.calculator-keys button:not(.operator):not(.all-clear):not(.equal-sign):not(.decimal):hover {
+  background: linear-gradient(135deg, #2d2d4a 0%, #3d3d5c 100%);
+}

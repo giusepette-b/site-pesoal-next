@@ -1,0 +1,187 @@
+/* Programacao.css */
+.programming-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.programming-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #f0f0f0;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container principal das sections */
+.programming-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Section individual */
+.programming-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programming-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Cabeçalho da section */
+.section-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #e94560;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Conteúdo da section */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Para sections com grid de componentes */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Texto de descrição */
+.section-description {
+  color: #d1d5db;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.section-description p {
+  margin-bottom: 1rem;
+}
+
+/* Listas estilizadas */
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.section-list li {
+  padding: 0.75rem 0;
+  color: #d1d5db;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.section-list li:last-child {
+  border-bottom: none;
+}
+
+.section-list li::before {
+  content: '▹';
+  color: #e94560;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+/* Cards de tecnologia */
+.tech-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.tech-card h4 {
+  color: #f0f0f0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.tech-card p {
+  color: #d1d5db;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .programming-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .programming-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .programming-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .programming-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}

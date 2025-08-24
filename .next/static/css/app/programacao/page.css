@@ -1,33 +1,351 @@
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/components/UnderContruction/UnderConstruction.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
-.under-construction {
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/components/Calculadora/Calculadora.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+/* Calculator.css - Design com paleta escura */
+
+.calculator-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 40vh;
-  background-color: #ff0000a2;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  margin: 0 auto;
 }
-.h1-under-construction {
-  color: white;
+
+.calculator-title {
+  color: #e94560;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.calculator {
+  width: 100%;
+  background: #0f3460;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: #1a1a2e;
+  color: #fff;
+  text-align: right;
+  padding: 10px 15px;
   font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.25rem;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: 'Courier New', monospace;
 }
-.p-under-construction {
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 0.5rem;
-}  
-@media (min-width: 640px) {
-  .h1-under-construction {
-    font-size: 2rem;
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.calculator-keys button {
+  height: 60px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: #1a1a2e;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-keys button:hover {
+  background: #2d2d4a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-keys button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos para os operadores */
+.calculator-keys .operator {
+  background: #e94560;
+  color: #fff;
+}
+
+.calculator-keys .operator:hover {
+  background: #ff6b81;
+}
+
+/* Estilo para o botão de igual */
+.calculator-keys .equal-sign {
+  background: #00b894;
+  color: #fff;
+  grid-column: span 2;
+}
+
+.calculator-keys .equal-sign:hover {
+  background: #00d4a3;
+}
+
+/* Estilo para o botão AC */
+.calculator-keys .all-clear {
+  background: #ff7675;
+  color: #fff;
+}
+
+.calculator-keys .all-clear:hover {
+  background: #ff9291;
+}
+
+/* Estilo para o botão decimal */
+.calculator-keys .decimal {
+  background: #37474f;
+}
+
+.calculator-keys .decimal:hover {
+  background: #455a64;
+}
+
+/* Efeito de foco para acessibilidade */
+.calculator-keys button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .calculator-container {
+    padding: 1rem;
+    max-width: 280px;
   }
-  .p-under-construction {
-    font-size: 1.125rem;
+  
+  .calculator {
+    padding: 15px;
+  }
+  
+  .calculator-screen {
+    height: 50px;
+    font-size: 1.7rem;
+  }
+  
+  .calculator-keys button {
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .calculator-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animação para o display quando o valor muda */
+.calculator-screen {
+  transition: all 0.3s ease;
+}
+
+/* Efeito de brilho nos botões numéricos */
+.calculator-keys button:not(.operator):not(.all-clear):not(.equal-sign):not(.decimal):hover {
+  background: linear-gradient(135deg, #2d2d4a 0%, #3d3d5c 100%);
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/components/ProgrammingSection/Programming.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Programacao.css */
+.programming-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.programming-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #f0f0f0;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container principal das sections */
+.programming-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Section individual */
+.programming-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programming-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Cabeçalho da section */
+.section-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #e94560;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Conteúdo da section */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Para sections com grid de componentes */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Texto de descrição */
+.section-description {
+  color: #d1d5db;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.section-description p {
+  margin-bottom: 1rem;
+}
+
+/* Listas estilizadas */
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.section-list li {
+  padding: 0.75rem 0;
+  color: #d1d5db;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.section-list li:last-child {
+  border-bottom: none;
+}
+
+.section-list li::before {
+  content: '▹';
+  color: #e94560;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+/* Cards de tecnologia */
+.tech-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.tech-card h4 {
+  color: #f0f0f0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.tech-card p {
+  color: #d1d5db;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .programming-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .programming-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .programming-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .programming-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
   }
 }

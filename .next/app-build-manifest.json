@@ -1,28 +1,10 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/sobre/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/sobre/page.css",
-      "static/chunks/app/sobre/page.js"
-    ],
-    "/musica/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/musica/page.css",
-      "static/chunks/app/musica/page.js"
     ],
     "/programacao/page": [
       "static/chunks/webpack.js",
@@ -30,11 +12,10 @@
       "static/css/app/programacao/page.css",
       "static/chunks/app/programacao/page.js"
     ],
-    "/contato/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/contato/page.css",
-      "static/chunks/app/contato/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }

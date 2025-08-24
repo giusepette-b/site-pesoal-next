@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import './MusicSection.css'
+import './MusicSection.css' // Este é o CSS específico para a homepage
 
 const MusicSection = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -36,29 +36,29 @@ const MusicSection = () => {
   };
 
   return (
-    <section className="music-showcase">
-      <div className="container">
-        <h2 className="section-title">Meu Trabalho Musical</h2>
-        <p className="section-description">
+    <section className="home-music-showcase">
+      <div className="home-music-container">
+        <h2 className="home-section-title">Meu Trabalho Musical</h2>
+        <p className="home-section-description">
           Explore minhas composições, produções e projetos musicais
         </p>
         
-        <div className="music-grid">
+        <div className="home-music-grid">
           {youtubeVideos.map((video, index) => (
-            <div className="music-card" key={index}>
-              <div className="music-thumbnail" onClick={() => openModal(video.id)}>
+            <div className="home-music-card" key={index}>
+              <div className="home-music-thumbnail" onClick={() => openModal(video.id)}>
                 <img 
                   src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} 
                   alt={video.title}
                 />
-                <div className="play-button">▶</div>
+                <div className="home-play-button">▶</div>
               </div>
-              <div className="music-info">
-                <h3 className="music-title">{video.title}</h3>
-                <p className="music-description">{video.description}</p>
-                <div className="music-tags">
+              <div className="home-music-info">
+                <h3 className="home-music-title">{video.title}</h3>
+                <p className="home-music-description">{video.description}</p>
+                <div className="home-music-tags">
                   {video.tags.map((tag, tagIndex) => (
-                    <span className="music-tag" key={tagIndex}>{tag}</span>
+                    <span className="home-music-tag" key={tagIndex}>{tag}</span>
                   ))}
                 </div>
               </div>
@@ -68,10 +68,10 @@ const MusicSection = () => {
 
         {/* Modal para exibir o vídeo */}
         {selectedVideo && (
-          <div className="modal-overlay" onClick={closeModal}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-close" onClick={closeModal}>×</button>
-              <div className="youtube-embed">
+          <div className="home-modal-overlay" onClick={closeModal}>
+            <div className="home-modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="home-modal-close" onClick={closeModal}>×</button>
+              <div className="home-youtube-embed">
                 <iframe 
                   src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
                   title="YouTube video player"
@@ -83,8 +83,8 @@ const MusicSection = () => {
           </div>
         )}
         
-        <div className="music-cta">
-          <a href="/musica" className="primary-button">Explorar Portfolio Musical</a>
+        <div className="home-music-cta">
+          <a href="/musica" className="home-primary-button">Explorar Portfolio Musical</a>
         </div>
       </div>
     </section>
