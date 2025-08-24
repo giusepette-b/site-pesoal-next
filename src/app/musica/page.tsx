@@ -1,3 +1,4 @@
+import MusicSection from "../components/MusicSection/MusicSection";
 import UnderConstruction from "../components/UnderContruction/UnderConstruction";
 
 export default function Musica() {
@@ -7,6 +8,7 @@ export default function Musica() {
       <p>Esta é a página dedicada à música.</p>
       <p>Em breve, adicionaremos conteúdo relacionado à música.</p>
       <UnderConstruction />
+      <MusicSection />
     </div>
   );
 }
