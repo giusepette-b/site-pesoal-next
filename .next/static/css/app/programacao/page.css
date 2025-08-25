@@ -157,6 +157,200 @@
 .calculator-keys button:not(.operator):not(.all-clear):not(.equal-sign):not(.decimal):hover {
   background: linear-gradient(135deg, #2d2d4a 0%, #3d3d5c 100%);
 }
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./src/app/components/Todo/TodoForm.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.TodoForm_form__hmj0Y {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.TodoForm_input__nSNvO {
+  flex: 1 1;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.TodoForm_input__nSNvO:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+.TodoForm_addButton__7_KR_ {
+  padding: 0.75rem 1.5rem;
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.TodoForm_addButton__7_KR_:hover {
+  background: #d12a55;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./src/app/components/Todo/TodoItem.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.TodoItem_todoItem__kTzpr {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.TodoItem_todoItem__kTzpr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.TodoItem_todoItem__kTzpr.TodoItem_completed__T0diP {
+  opacity: 0.6;
+}
+
+.TodoItem_checkbox__e5PTb {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.TodoItem_todoText__0KDH9 {
+  flex: 1 1;
+  color: #d1d5db;
+  word-break: break-word;
+}
+
+.TodoItem_todoItem__kTzpr.TodoItem_completed__T0diP .TodoItem_todoText__0KDH9 {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.TodoItem_editInput__0F3bn {
+  flex: 1 1;
+  padding: 0.5rem;
+  border: 1px solid #e94560;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.TodoItem_editInput__0F3bn:focus {
+  outline: none;
+}
+
+.TodoItem_actions__j3YoE {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.TodoItem_editButton__Xhj0g,
+.TodoItem_deleteButton__9ymeQ {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.TodoItem_editButton__Xhj0g:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.TodoItem_deleteButton__9ymeQ:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.TodoItem_date__nBQuB {
+  font-size: 0.75rem;
+  color: #6b7280;
+  min-width: 80px;
+  text-align: right;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./src/app/components/Todo/TodoApp.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.TodoApp_container__i4ne9 {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.TodoApp_title__8qvQR {
+  text-align: center;
+  color: #e94560;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.TodoApp_filters__i1aRY {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.TodoApp_filterButton__qWNZM {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.TodoApp_filterButton__qWNZM:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.TodoApp_filterButton__qWNZM.TodoApp_active__EVC_B {
+  background: #e94560;
+  color: white;
+}
+
+.TodoApp_todoList__rav3O {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.TodoApp_emptyMessage__4Kln4 {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  padding: 2rem;
+}
+
+.TodoApp_clearButton__QGYm9 {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.TodoApp_clearButton__QGYm9:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/programacao/Exemplos.css ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/

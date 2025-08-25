@@ -1,0 +1,80 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.todoItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.todoItem.completed {
+  opacity: 0.6;
+}
+
+.checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.todoText {
+  flex: 1;
+  color: #d1d5db;
+  word-break: break-word;
+}
+
+.todoItem.completed .todoText {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.editInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #e94560;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.editInput:focus {
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton,
+.deleteButton {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.editButton:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.deleteButton:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.date {
+  font-size: 0.75rem;
+  color: #6b7280;
+  min-width: 80px;
+  text-align: right;
+}
