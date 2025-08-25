@@ -157,17 +157,22 @@
 .calculator-keys button:not(.operator):not(.all-clear):not(.equal-sign):not(.decimal):hover {
   background: linear-gradient(135deg, #2d2d4a 0%, #3d3d5c 100%);
 }
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/components/ProgrammingSection/Programming.css ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************/
-/* Programacao.css */
-.programming-container {
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/programacao/Exemplos.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/* Exemplos.css - Estilos específicos para a página de exemplos */
+
+/* Container principal */
+.exemplos-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
 }
 
-.programming-title {
+/* Título principal */
+.exemplos-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -178,16 +183,16 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Container principal das sections */
-.programming-sections {
+/* Container das sections */
+.exemplos-sections {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
 /* Section individual */
-.programming-section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+.exemplos-section {
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 2.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -195,25 +200,25 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.programming-section:hover {
+.exemplos-section:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 /* Cabeçalho da section */
-.section-header {
+.exemplos-section-header {
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.section-title {
+.exemplos-section-title {
   font-size: 1.8rem;
   font-weight: 600;
   color: #e94560;
   margin-bottom: 0.5rem;
 }
 
-.section-subtitle {
+.exemplos-section-subtitle {
   font-size: 1.1rem;
   color: #d1d5db;
   max-width: 600px;
@@ -222,40 +227,31 @@
 }
 
 /* Conteúdo da section */
-.section-content {
+.exemplos-section-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* Para sections com grid de componentes */
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
 /* Texto de descrição */
-.section-description {
+.exemplos-description {
   color: #d1d5db;
   line-height: 1.7;
   font-size: 1.1rem;
 }
 
-.section-description p {
+.exemplos-description p {
   margin-bottom: 1rem;
 }
 
 /* Listas estilizadas */
-.section-list {
+.exemplos-list {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
 }
 
-.section-list li {
+.exemplos-list li {
   padding: 0.75rem 0;
   color: #d1d5db;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -263,19 +259,28 @@
   align-items: center;
 }
 
-.section-list li:last-child {
+.exemplos-list li:last-child {
   border-bottom: none;
 }
 
-.section-list li::before {
+.exemplos-list li::before {
   content: '▹';
   color: #e94560;
   margin-right: 0.75rem;
   font-weight: bold;
 }
 
+/* Grid para tecnologia */
+.exemplos-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
 /* Cards de tecnologia */
-.tech-cards {
+.exemplos-tech-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem;
@@ -283,7 +288,7 @@
   margin-top: 1.5rem;
 }
 
-.tech-card {
+.exemplos-tech-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   padding: 1.5rem;
@@ -291,61 +296,85 @@
   transition: all 0.3s ease;
 }
 
-.tech-card:hover {
+.exemplos-tech-card:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-3px);
 }
 
-.tech-card h4 {
+.exemplos-tech-card h4 {
   color: #f0f0f0;
   margin-bottom: 0.75rem;
   font-size: 1.2rem;
 }
 
-.tech-card p {
+.exemplos-tech-card p {
   color: #d1d5db;
   margin: 0;
   line-height: 1.6;
 }
 
+/* Centralizador de conteúdo */
+.exemplos-center-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-  .programming-container {
+  .exemplos-container {
     padding: 1.5rem 1rem;
   }
   
-  .programming-title {
+  .exemplos-title {
     font-size: 2rem;
     margin-bottom: 2rem;
   }
   
-  .programming-section {
+  .exemplos-section {
     padding: 2rem 1.5rem;
   }
   
-  .section-title {
+  .exemplos-section-title {
     font-size: 1.5rem;
   }
   
-  .section-grid {
+  .exemplos-tech-grid {
     grid-template-columns: 1fr;
   }
   
-  .tech-cards {
+  .exemplos-tech-cards {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .programming-section {
+  .exemplos-section {
     padding: 1.5rem 1rem;
   }
   
-  .section-title {
+  .exemplos-section-title {
     font-size: 1.3rem;
   }
   
-  .section-subtitle {
+  .exemplos-section-subtitle {
     font-size: 1rem;
   }
+}
+
+/* Garantir isolamento de estilos */
+.exemplos-container * {
+  box-sizing: border-box;
+}
+
+.exemplos-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.exemplos-container button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
 }
