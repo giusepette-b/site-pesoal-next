@@ -1,0 +1,65 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/app/components/Contato/ContatoPage.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.contact-form-placeholder {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px dashed #dee2e6;
+}
+
+.contact-form-placeholder h3 {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-form-placeholder p {
+  color: #6c757d;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.placeholder-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-button-tertiary {
+  background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.cta-button-tertiary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-form-placeholder {
+    padding: 1.5rem;
+  }
+  
+  .placeholder-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .placeholder-actions .cta-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}

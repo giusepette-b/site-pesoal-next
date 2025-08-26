@@ -12,11 +12,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/programacao/page": [
+    "/contato/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/programacao/page.css",
-      "static/chunks/app/programacao/page.js"
+      "static/css/app/contato/page.css",
+      "static/chunks/app/contato/page.js"
     ]
   }
 }
