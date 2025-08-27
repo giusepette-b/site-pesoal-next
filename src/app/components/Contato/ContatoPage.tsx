@@ -19,51 +19,56 @@ export default function ContactPage() {
               <div className="contact-info-icon">📧</div>
               <h3>Email</h3>
               <p>bruno.giusepette@gmail.com</p>
-              <span className="contact-info-label">Resposta em até 24h</span>
+              <a href="mailto:bruno.giusepette@gmail.com" className="contact-link">
+                Enviar mensagem
+              </a>
             </div>
 
             <div className="contact-info-card">
               <div className="contact-info-icon">💬</div>
               <h3>WhatsApp</h3>
               <p>+55 (11) 98388-1295</p>
-              <span className="contact-info-label">Disponível das 9h às 18h</span>
+              <a href="https://wa.me/5511983881295" className="contact-link" target="_blank" rel="noopener noreferrer">
+                Iniciar conversa
+              </a>
             </div>
 
             <div className="contact-info-card">
               <div className="contact-info-icon">🌐</div>
               <h3>Redes Sociais</h3>
-              <p>LinkedIn / GitHub / Instagram</p>
-              <span className="contact-info-label">Me siga para updates</span>
+              <p>Conecte-se nas redes</p>
+              <div className="social-links">
+                <a href="https://www.linkedin.com/in/bruno-giusepette-643956224/" aria-label="LinkedIn">
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/giusepette-b" className="social-links" aria-label="GitHub">
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/giuse9319/" className="social-links" aria-label="Instagram">
+                  <span>Instagram</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div className="contact-form-placeholder">
-            <h3>Formulário Temporariamente Indisponível</h3>
-            <p>No momento, o formulário de contato está em manutenção.</p>
-            <p>Por favor, utilize um dos métodos de contato ao lado para entrar em contato comigo.</p>
-            <div className="placeholder-actions">
-              <a href="mailto:bruno.giusepette@gmail.com" className="cta-button cta-button-primary">
-                Enviar Email Direto
-              </a>
-              <a href="https://wa.me/5511983881295" className="cta-button cta-button-secondary">
-                Abrir WhatsApp
-              </a>
+          <div className="contact-illustration">
+            <div className="illustration-container">
+              <div className="illustration-icon">👨‍💻</div>
+              <h3>Vamos Trabalhar Juntos?</h3>
+              <p>Entre em contato através de um dos canais ao lado. Respondo rapidamente!</p>
             </div>
           </div>
         </div>
 
         <div className="contact-cta">
-          <h2>Vamos trabalhar juntos?</h2>
-          <p>Entre em contato através dos canais acima para discutir seu projeto</p>
+          <h2>Pronto para começar seu projeto?</h2>
+          <p>Entre em contato hoje mesmo para uma consulta gratuita</p>
           <div className="contact-cta-buttons">
             <a href="mailto:bruno.giusepette@gmail.com" className="cta-button cta-button-primary">
-              Enviar Email
+              <span>Enviar Email</span>
             </a>
             <a href="https://wa.me/5511983881295" className="cta-button cta-button-secondary">
-              WhatsApp
-            </a>
-            <a href="https://www.linkedin.com/in/bruno-giusepette-643956224/" className="cta-button cta-button-tertiary">
-              LinkedIn
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>
